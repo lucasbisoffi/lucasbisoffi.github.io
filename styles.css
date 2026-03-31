@@ -180,7 +180,7 @@ h2 span {
     -webkit-mask-size: 100% 4px;
     mask-image: linear-gradient(to bottom, transparent 50%, black 50%);         /* Para outros */
     mask-size: 100% 4px;
-    max-width: 100%; /* Garante que ela não "fuja" da tela no celular */
+    max-width: 100%;
     height: auto;
 }
 

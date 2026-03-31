@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    // 1. Typewriter (independente)
+    
     const text = "Software Engineer | Quantum Enthusiast";
     const typingElement = document.getElementById("typing-text");
     if (typingElement) {
@@ -15,7 +15,6 @@ window.addEventListener('load', function() {
         typeWriter();
     }
 
-    // 2. Partículas
     if (document.getElementById('particles-js')) {
         try {
             particlesJS("particles-js", {
