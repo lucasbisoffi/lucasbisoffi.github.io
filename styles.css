@@ -1,6 +1,4 @@
-/* paleta de cores salve em root, onde se guarda variáveis globais*/
 :root {
-    /*dois tracos antes de variaveis criadas por mim*/
     --blackBackground: #0b0b0b;
     --greyBackground: #1a1a1a;
     --wine: #720917;
@@ -16,17 +14,14 @@ body {
     margin: 0;
 }
 
-/* Garante que todos os títulos de seção usem o Vinho */
 h1, h2, h3, .display-4, .display-3 {
     color: var(--brighterWine) !important;
 }
 
-/* Ajuste específico para a barra "/" antes dos títulos */
 h2 span {
     color: var(--brighterWine) !important;
 }
 
-/* Se você usou a classe text-wine em algum lugar, garanta que ela brilhe */
 .text-wine {
     color: var(--brighterWine) !important;
 }
@@ -178,9 +173,7 @@ h2 span {
     width: auto;
     z-index: 1;
     opacity: 0.4;
-    /* Efeito de brilho digital */
     filter: grayscale(100%) brightness(1.2) drop-shadow(0 0 15px var(--wine));
-    /* Linhas horizontais de scan (estilo TV antiga/digital) */
     mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
     mask-size: 100% 4px;
     pointer-events: none;
@@ -190,4 +183,37 @@ h2 span {
 .col-md-5:hover .silhouette-overlay {
     opacity: 0.8;
     filter: grayscale(0%) brightness(1) drop-shadow(0 0 20px var(--brighterWine));
+}
+
+@media (max-width: 768px) {
+    h1.display-3 {
+        font-size: 2.5rem !important;
+        margin-top: 20px;
+    }
+
+    header.vh-100 {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .silhouette-overlay {
+        max-height: 300px !important;
+        margin-top: 0 !important;
+    }
+
+    .silhouette-wrapper {
+        margin-bottom: 30px;
+    }
+
+    #particles-js {
+        height: 100%;
+    }
+}
+
+.navbar-collapse {
+    background-color: var(--bg-dark);
+    padding: 20px;
+    border-radius: 10px;
 }
