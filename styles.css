@@ -228,6 +228,6 @@ h2 span {
 }
 
 .navbar-brand:hover span {
-    color: var(--greyishWhite) !important;
+    color: var(--brighterWine) !important;
     transition: 0.3s;
 }
