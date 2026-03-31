@@ -174,10 +174,14 @@ h2 span {
     z-index: 1;
     opacity: 0.4;
     filter: grayscale(100%) brightness(1.2) drop-shadow(0 0 15px var(--wine));
-    mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
-    mask-size: 100% 4px;
     pointer-events: none;
     transition: 0.5s ease;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%); /* Para iPhone */
+    -webkit-mask-size: 100% 4px;
+    mask-image: linear-gradient(to bottom, transparent 50%, black 50%);         /* Para outros */
+    mask-size: 100% 4px;
+    max-width: 100%; /* Garante que ela não "fuja" da tela no celular */
+    height: auto;
 }
 
 .col-md-5:hover .silhouette-overlay {
@@ -200,11 +204,12 @@ h2 span {
 
     .silhouette-overlay {
         max-height: 300px !important;
-        margin-top: 0 !important;
     }
 
     .silhouette-wrapper {
-        margin-bottom: 30px;
+        min-height: 300px;
+        display: block;
+        margin: 0 auto;
     }
 
     #particles-js {
@@ -216,4 +221,13 @@ h2 span {
     background-color: var(--bg-dark);
     padding: 20px;
     border-radius: 10px;
+}
+
+.navbar-toggler-icon {
+    filter: invert(11%) sepia(85%) saturate(4176%) hue-rotate(345deg) brightness(85%) contrast(100%);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
 }
