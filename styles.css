@@ -224,10 +224,10 @@ h2 span {
 }
 
 .navbar-toggler-icon {
-    filter: invert(11%) sepia(85%) saturate(4176%) hue-rotate(345deg) brightness(85%) contrast(100%);
+    filter: invert(13%) sepia(94%) saturate(7403%) hue-rotate(352deg) brightness(89%) contrast(100%);
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
-    outline: none;
+.navbar-brand:hover span {
+    color: var(--greyishWhite) !important;
+    transition: 0.3s;
 }
