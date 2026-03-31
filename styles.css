@@ -1,0 +1,193 @@
+/* paleta de cores salve em root, onde se guarda variáveis globais*/
+:root {
+    /*dois tracos antes de variaveis criadas por mim*/
+    --blackBackground: #0b0b0b;
+    --greyBackground: #1a1a1a;
+    --wine: #720917;
+    --brighterWine: #a11225;
+    --greyishWhite: #e0e0e0;
+}
+
+body {
+    background-color: var(--blackBackground);
+    color: var(--greyishWhite);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Garante que todos os títulos de seção usem o Vinho */
+h1, h2, h3, .display-4, .display-3 {
+    color: var(--brighterWine) !important;
+}
+
+/* Ajuste específico para a barra "/" antes dos títulos */
+h2 span {
+    color: var(--brighterWine) !important;
+}
+
+/* Se você usou a classe text-wine em algum lugar, garanta que ela brilhe */
+.text-wine {
+    color: var(--brighterWine) !important;
+}
+
+.navbar {
+    background-color: rgba(11, 11, 11, 0.95) !important;
+    border-bottom: 1px solid var(--wine);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.wineButton {
+    background-color: var(--wine);
+    color: white !important;
+    border: none;
+    padding: 10px 25px;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.wineButton:hover {
+    background-color: var(--greyBackground);
+    box-shadow: 0 0 15px var(--brighterWine);
+}
+
+.nav-link {
+    color: var(--brighterWine) !important;
+    transition: 0.3s;
+    font-weight: 500;
+    padding-left: 15px !important;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--greyishWhite) !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent !important;
+    color: var(--greyishWhite) !important;
+    border-left: 2px solid var(--wine);
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.card-custom {
+    background: rgba(26, 26, 26, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(114, 9, 23, 0.4);
+    color: var(--greyishWhite) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    border-color: var(--brighterWine);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-link-icons {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+}
+
+.card-link-icons a {
+    color: var(--greyishWhite) !important;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.card-link-icons a:hover {
+    color: var(--brighterWine) !important;
+    transform: scale(1.1);
+}
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-photo {
+    position: relative;
+    z-index: 2;
+    border: 3px solid var(--wine);
+    background-color: var(--greyBackground);
+    max-height: 400px;
+    filter: grayscale(100%);
+    transition: 1s ease;
+}
+
+.profile-photo:hover {
+    filter: grayscale(0%);
+    border-color: var(--brighterWine);
+}
+
+.photo-accent {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--wine);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: all;
+}
+
+.position-relative {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.silhouette-wrapper {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.silhouette-overlay {
+    display: block;
+    position: relative;
+    height: 480px;
+    width: auto;
+    z-index: 1;
+    opacity: 0.4;
+    /* Efeito de brilho digital */
+    filter: grayscale(100%) brightness(1.2) drop-shadow(0 0 15px var(--wine));
+    /* Linhas horizontais de scan (estilo TV antiga/digital) */
+    mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
+    mask-size: 100% 4px;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.col-md-5:hover .silhouette-overlay {
+    opacity: 0.8;
+    filter: grayscale(0%) brightness(1) drop-shadow(0 0 20px var(--brighterWine));
+}
