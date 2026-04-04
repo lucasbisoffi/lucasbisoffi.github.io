@@ -1,8 +1,10 @@
 :root {
     --blackBackground: #0b0b0b;
     --greyBackground: #1a1a1a;
-    --wine: #720917;
-    --brighterWine: #a11225;
+    /* Um azul marinho profundo, mas com vida */
+    --navy: #003566; 
+    /* Um Azul Elétrico/Ciano que vai dar o "brilho" (Brilliant Navy) */
+    --blueHighlight: #00A3FF; 
     --greyishWhite: #e0e0e0;
 }
 
@@ -15,27 +17,41 @@ body {
 }
 
 h1, h2, h3, .display-4, .display-3 {
-    color: var(--brighterWine) !important;
+    color: var(--blueHighlight) !important;
 }
 
 h2 span {
-    color: var(--brighterWine) !important;
+    color: var(--blueHighlight) !important;
 }
 
-.text-wine {
-    color: var(--brighterWine) !important;
+.text-blue {
+    color: var(--blueHighlight) !important;
+}
+
+.tech-badge {
+    background-color: transparent !important;
+    border: 1px solid var(--blueHighlight) !important;
+    color: var(--greyishWhite) !important;
+    padding: 8px 15px !important;
+    transition: 0.3s;
+}
+
+.tech-badge:hover {
+    background-color: rgba(0, 163, 255, 0.1) !important; 
+    box-shadow: 0 0 10px var(--blueHighlight);
+    transform: translateY(-2px);
 }
 
 .navbar {
     background-color: rgba(11, 11, 11, 0.95) !important;
-    border-bottom: 1px solid var(--wine);
+    border-bottom: 1px solid var(--navy);
     backdrop-filter: blur(10px);
     padding: 0.8rem 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .wineButton {
-    background-color: var(--wine);
+    background-color: var(--navy);
     color: white !important;
     border: none;
     padding: 10px 25px;
@@ -48,11 +64,11 @@ h2 span {
 
 .wineButton:hover {
     background-color: var(--greyBackground);
-    box-shadow: 0 0 15px var(--brighterWine);
+    box-shadow: 0 0 20px var(--blueHighlight);
 }
 
 .nav-link {
-    color: var(--brighterWine) !important;
+    color: var(--blueHighlight) !important;
     transition: 0.3s;
     font-weight: 500;
     padding-left: 15px !important;
@@ -66,7 +82,7 @@ h2 span {
 .nav-pills .nav-link.active {
     background-color: transparent !important;
     color: var(--greyishWhite) !important;
-    border-left: 2px solid var(--wine);
+    border-left: 2px solid var(--navy);
     border-radius: 0;
     font-weight: bold;
 }
@@ -82,7 +98,7 @@ h2 span {
 
 .card-custom:hover {
     transform: translateY(-5px);
-    border-color: var(--brighterWine);
+    border-color: var(--blueHighlight);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -102,7 +118,7 @@ h2 span {
 }
 
 .card-link-icons a:hover {
-    color: var(--brighterWine) !important;
+    color: var(--blueHighlight) !important;
     transform: scale(1.1);
 }
 
@@ -114,7 +130,7 @@ h2 span {
 .profile-photo {
     position: relative;
     z-index: 2;
-    border: 3px solid var(--wine);
+    border: 3px solid var(--navy);
     background-color: var(--greyBackground);
     max-height: 400px;
     filter: grayscale(100%);
@@ -122,8 +138,9 @@ h2 span {
 }
 
 .profile-photo:hover {
-    filter: grayscale(0%);
-    border-color: var(--brighterWine);
+    filter: grayscale(100%);
+    border-color: var(--blueHighlight) !important;
+    box-shadow: 0 0 20px var(--blueHighlight);
 }
 
 .photo-accent {
@@ -132,7 +149,7 @@ h2 span {
     left: 20px;
     width: 100%;
     height: 100%;
-    background-color: var(--wine);
+    background-color: var(--navy);
     border-radius: 50%;
     z-index: 1;
     opacity: 0.3;
@@ -173,7 +190,7 @@ h2 span {
     width: auto;
     z-index: 1;
     opacity: 0.4;
-    filter: grayscale(100%) brightness(1.2) drop-shadow(0 0 15px var(--wine));
+    filter: grayscale(100%) brightness(1.2) drop-shadow(0 0 15px var(--blueHighlight));
     pointer-events: none;
     transition: 0.5s ease;
     -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%); /* Para iPhone */
@@ -186,7 +203,7 @@ h2 span {
 
 .col-md-5:hover .silhouette-overlay {
     opacity: 0.8;
-    filter: grayscale(0%) brightness(1) drop-shadow(0 0 20px var(--brighterWine));
+    filter: grayscale(0%) brightness(1) drop-shadow(0 0 20px var(--blueHighlight));
 }
 
 @media (max-width: 768px) {
@@ -224,7 +241,7 @@ h2 span {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23a11225' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230077b6' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .navbar-toggler {
@@ -235,6 +252,6 @@ h2 span {
 
 
 .navbar-brand:hover span {
-    color: var(--brighterWine) !important;
+    color: var(--blueHighlight) !important;
     transition: 0.3s;
 }

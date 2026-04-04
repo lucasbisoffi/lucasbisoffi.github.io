@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
                     "line_linked": {
                         "enable": true,
                         "distance": 120,
-                        "color": "#720917",
+                        "color": "#00A3FF",
                         "opacity": 0.6,
                         "width": 1
                     },
