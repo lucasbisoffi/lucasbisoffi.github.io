@@ -48,7 +48,7 @@ h2 span {
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-.wineButton {
+.blueButton {
     background-color: var(--navy);
     color: white !important;
     border: none;
@@ -60,7 +60,7 @@ h2 span {
     width: fit-content;
 }
 
-.wineButton:hover {
+.blueButton:hover {
     background-color: var(--greyBackground);
     box-shadow: 0 0 20px var(--blueHighlight);
 }
@@ -88,7 +88,7 @@ h2 span {
 .card-custom {
     background: rgba(26, 26, 26, 0.8) !important;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(114, 9, 23, 0.4);
+    border: 1px solid rgba(0, 163, 255, 0.4);
     color: var(--greyishWhite) !important;
     transition: transform 0.3s ease, border-color 0.3s ease;
     position: relative;
@@ -233,7 +233,7 @@ h2 span {
 }
 
 .navbar-collapse {
-    background-color: var(--bg-dark);
+    background-color: var(--blackBackground);
     padding: 20px;
     border-radius: 10px;
 }
