@@ -1,9 +1,7 @@
 :root {
     --blackBackground: #0b0b0b;
     --greyBackground: #1a1a1a;
-    /* Um azul marinho profundo, mas com vida */
     --navy: #003566; 
-    /* Um Azul Elétrico/Ciano que vai dar o "brilho" (Brilliant Navy) */
     --blueHighlight: #00A3FF; 
     --greyishWhite: #e0e0e0;
 }
